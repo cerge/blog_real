@@ -82,12 +82,5 @@ Próximamente imágenes del frontend y backend.
 
 ---
 
-## ✅ Recomendado para:
-
-- Practicantes de Laravel
-- Portafolios de programadores
-- Estudiantes de desarrollo web
-
----
 
 ¡Gracias por visitar este proyecto! Si te resulta útil, no olvides dejar una ⭐ en GitHub.
