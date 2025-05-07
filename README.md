@@ -1,61 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📝 Ejemplo de blog con Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto es un ejemplo funcional de un blog hecho con **Laravel 12**, usando **Bootstrap** para el diseño. Incluye un panel de administración completo (CRUD de posts) y una interfaz pública de blog. Ideal para aprender Laravel desde cero o mostrar habilidades en tu portafolio.
 
-## About Laravel
+> Cristian Hernan Gaitano Ornia @2024
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 ¿Qué incluye?
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- CRUD completo de publicaciones (Crear, Editar, Ver, Borrar)
+- Panel administrativo protegido
+- Frontend público responsive con Bootstrap
+- Comentarios detallados en el código para facilitar el aprendizaje
+- Listo para subir a **Render.com** o correr en **Laragon (Windows)**
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🧑‍💻 Tecnologías utilizadas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP 8.3
+- Laravel 12
+- Bootstrap 5
+- Blade (sistema de plantillas)
+- SQLite/MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📦 Instalación local (Laragon – Windows)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Cloná o descargá el proyecto y descomprimilo dentro de `C:\laragon\www`
+2. Abrí la terminal en esa carpeta y ejecutá:
 
-### Premium Partners
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+3. Accedé a `http://localhost:8000` para ver el blog público.
+4. Accedé a `http://localhost:8000/admin/posts` para la parte administrativa.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ☁️ Subirlo a Render.com (Hosting gratuito)
 
-## Code of Conduct
+1. Subí el código a un repositorio en GitHub
+2. Entrá a [https://render.com](https://render.com) y creá una cuenta
+3. Creá un nuevo servicio **Web Service** y conectá tu repositorio
+4. Indicá los siguientes datos:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Build Command: `composer install && php artisan migrate`
+- Start Command: `php artisan serve --host=0.0.0.0 --port=10000`
+- Runtime: PHP 8.3
 
-## Security Vulnerabilities
+5. ¡Listo! Tu blog estará disponible en un dominio gratuito de Render.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📂 Estructura del proyecto
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+├── app/
+├── resources/
+│   ├── views/
+│       ├── blog/         → vistas públicas
+│       ├── posts/        → CRUD administrativo
+│       └── layout.blade.php
+├── routes/
+│   └── web.php
+├── database/
+├── public/
+└── .env.example
+```
+
+---
+
+## ✍️ Comentarios útiles
+
+Este proyecto tiene muchos comentarios para guiarte, incluyendo algunos "naturales" con errores de tipeo intencionales (ej: `postts`) para parecer aún más real y didáctico.
+
+---
+
+## 👀 Vista previa
+
+Próximamente imágenes del frontend y backend.
+
+---
+
+## ✅ Recomendado para:
+
+- Practicantes de Laravel
+- Portafolios de programadores
+- Estudiantes de desarrollo web
+
+---
+
+¡Gracias por visitar este proyecto! Si te resulta útil, no olvides dejar una ⭐ en GitHub.
