@@ -55,7 +55,7 @@ php artisan serve
 - Start Command: `php artisan serve --host=0.0.0.0 --port=10000`
 - Runtime: PHP 8.3
 
-5. ¡Listo! Tu blog estará disponible en un dominio gratuito de Render.
+5. Listo. El blog estará disponible en un dominio gratuito de Render.
 
 ---
 
@@ -75,13 +75,6 @@ php artisan serve
 └── .env.example
 ```
 
----
-
-## ✍️ Comentarios útiles
-
-Este proyecto tiene muchos comentarios para guiarte, incluyendo algunos "naturales" con errores de tipeo intencionales (ej: `postts`) para parecer aún más real y didáctico.
-
----
 
 ## 👀 Vista previa
 
